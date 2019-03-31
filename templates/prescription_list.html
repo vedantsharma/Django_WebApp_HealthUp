@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Uploaded Prescriptions</h2>
+    <table class="table mb-0">
+        <thead>
+           <tr>
+            <th>Cover<th>
+            <th>Title</th>
+            <th>Patient</th>
+            <th>Download</th>
+            <th>Delete</th>
+           </tr>
+        </thead>
+        <tbody>
+            {% for prescription in prescriptions %}
+                <tr>
+                    <td>
+                        {% if prescription.cover %}
+                           <img src="{{ prescription.cover.url }}" alt="{{ prescription.title }}" style="width:100px;">
+                        {% else %}
+                           <span class="text-muted">No cover</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ prescription.title }}</td>
+                    <td>{{ prescription.patient}}</td>
+                    <td>
+                        <a href="{{ prescription.pdf }}" class="btn btn-primary btn-sm" target="_blank">
+                           Download PDF
+                        </a>
+                    </td>
+                     <td>
+                        <form method="post" action="{% url 'delete_pres' prescription.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                     </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+{% endblock %}
