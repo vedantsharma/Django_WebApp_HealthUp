@@ -1,6 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <br>
+    <img src="/media/prescription/covers/HealthUp.PNG" class="img-responsive"  align="right" style="border-radius:100%;
+width:190px;height:190px;">
+    <div class='select2-container' style="color: royalblue">
     <h2>Here at HealthUp</h2>
-    <p>We Care For You {% if user.is_authenticated %}{{ user.username }} {% else %}Visitor {% endif %}!</p>
+    <p>We Care For You {% if user.is_authenticated %}{{ user.username }} {% else %}Visitor {% endif %}!<i class="fa fa-user fa-2x" aria-hidden="true"></i></p>
+    </div>
+    </br></br></br></br></br></br></br></br></br>
+    <div class="select2-container" style="color: blue">
+        <h1 class="mb-3 bread" style="text-align: center">About HealthUp</h1>
+                <p style="text-align: center">
+                  A Web-Application to provide a repository of patient record, leading to processing and creation of digitized Electronic Health Record(EHR), in order to analyze and identify patterns among similar patients
+                </p>
+    </div>
+
+    Know us more:</br>
+        <i class="fa fa-facebook-square fa-2x" aria-hidden="true" style="color: #3b5998; "></i>
+        <i class="fa fa-twitter-square fa-2x" aria-hidden="true" style="color: #4099FF"></i>
+        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true" style="color: #007bb6"></i>
+
+
+    </body>
+
+    <style>
+    body{
+        min-height: 5000px;
+        background: url("https://www.gsb.stanford.edu/sites/gsb/files/styles/1630x_variable/public/resources/chang-healthinnovations_1.jpg?itok=ttUKQ0_m") no-repeat center center fixed;
+        -webkit-background-size: cover ;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    </style>
 {% endblock %}

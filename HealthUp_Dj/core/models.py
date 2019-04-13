@@ -12,5 +12,5 @@ class Prescription(models.Model):
     def delete(self, *args, **kwargs):
         self.pdf.delete()
         self.cover.delete()
-        super().delete(*args, **kwargs)
+        super(self).delete(*args, **kwargs)
 

@@ -1,0 +1,24 @@
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #64c6f7;
+  margin: 0;
+          font-family: "Trebuchet MS";
+}
+
+#note {
+  position: absolute;
+  color: rgba(100, 198, 247, 0.82);
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+  font-family: "Trebuchet MS";
+}
+
+.navbar{
+    background-color: lightseagreen !important;
+}
