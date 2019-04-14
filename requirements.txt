@@ -5,6 +5,7 @@ colorama==0.4.1
 coverage==4.5.3
 Django==2.1.7
 django-crispy-forms==1.7.2
+django-jenkins==0.110.0
 Faker==0.9.1
 javascript==2015.32.59
 mixer==6.1.3
